@@ -32,6 +32,9 @@ console.log(myArr)
 
 arr1.push(arr2)
 
+const arr1 = [1, 2, 3, 4, 5]
+const arr2 = [6, 7, 8, 9, 10]
+
 const arr3 = arr1.concat(arr2)
 console.log(arr3)
 
@@ -46,5 +49,12 @@ console.log(arr4)
 
 */
 
-const arr1 = [1, 2, 3, 4, 5]
-const arr2 = [6, 7, 8, 9, 10]
+console.log(Array.isArray("Devi"))
+console.log(Array.from("DeviPrasad"))
+
+const score1 = 100
+const score2 = 101
+const score3 = 102
+
+const score4 = Array.of(score1, score2, score3)
+console.log(score4)
