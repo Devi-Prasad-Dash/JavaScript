@@ -70,7 +70,6 @@ console.log(Object.keys(regularUser))
 console.log(Object.values(regularUser))
 console.log(Object.entries(regularUser))
 
-*/
 
 const regularUser = {
     email : "devi@gmail.com",
@@ -83,3 +82,18 @@ const regularUser = {
 }
 
 console.log(regularUser.hasOwnProperty('emails'))
+
+*/
+
+const user = {
+    name : "Devi",
+    age : "21",
+    course : "JavaSCript",
+    teacher : "Hitsesh Sir"
+}
+
+const {course : c} = user
+
+// console.log(course)
+
+console.log(c)
