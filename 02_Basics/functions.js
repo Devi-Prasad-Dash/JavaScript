@@ -53,10 +53,62 @@ function handleOnject(object) {
 
 console.log(handleOnject(user))
 
-*/
 
 function handleArray(arr1) {
     return arr1[0]
 }
 
 console.log(handleArray([1,2,3,4]))
+
+
+const user = {
+    username : "Devi",
+    age : 21,
+    wishMessage : function() {
+        console.log(`${this.username} just logged in`)
+        console.log(this)
+    }
+}
+console.log(this)
+user.wishMessage()
+user.username = "Prasad"
+user.wishMessage()
+
+
+function chai() {
+    let username = "Devi"
+    console.log(this);
+}
+
+chai()
+
+
+const chai = () => {
+    console.log(this)
+}
+
+chai()
+
+
+const add = (num1, num2) => {
+    return num1+num2
+}
+
+console.log(add(5,6))
+
+
+const add = (num1, num2) => num1 + num2
+console.log(add(5,6))
+
+const details = () => ({name : "Devi", age: 23})
+console.log(details())
+
+*/
+
+
+const msg = ((name) => (`DB Connected for ${name}`))("Devi");
+console.log(msg);
+
+(function chai(){
+    console.log("Hello world")
+})();
