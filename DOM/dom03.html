@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dom Learning</title>
+</head>
+<body style="background-color: #212121; color: aliceblue;">
+    <ul class="language">
+        <li>JavaScript</li>
+    </ul>
+</body>
+<script>
+    function addLanguage(lang) {
+        const list = document.createElement('li');
+        list.innerHTML = `${lang}`;
+        document.querySelector('ul').appendChild(list);
+    }
+    addLanguage("Python")
+    addLanguage("Java")
+
+    function addOptLang(lang) {
+        const list = document.createElement('li');
+        list.appendChild(document.createTextNode(lang))
+        document.querySelector('ul').appendChild(list)
+    }
+    addOptLang("React")
+
+    const secondLang = document.querySelector('li:nth-child(2)')
+    const newLi = document.createElement('li')
+    newLi.textContent = "HTML"
+    secondLang.replaceWith(newLi)
+
+    const firstLang = document.querySelector('li:first-child')
+    firstLang.outerHTML = '<li>CSS</li>'
+
+    const lastLang = document.querySelector('li:last-Child')
+    lastLang.remove()
+</script>
+</html>
